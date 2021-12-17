@@ -1,6 +1,6 @@
-CucumberOptions\CucumberTestRunner.class
 Print.class
 CucumberOptions\Hooks.class
 CucumberOptions\Hooks$BrowserCleanup.class
+CucumberOptions\TestRunner.class
 Step\MyStepdefs.class
 CucumberOptions\Hooks$1.class

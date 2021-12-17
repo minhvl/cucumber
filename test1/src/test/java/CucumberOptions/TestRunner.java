@@ -11,8 +11,8 @@ import cucumber.api.junit.Cucumber;
         glue = "src/test/java/Step",
         monochrome = true,
         plugin = { "pretty", "html:target/site/cucumber-report-default", "json:target/site/cucumber.json" },
-        snippets = SnippetType.CAMELCASE
-//        tags = { "@purchase" }
+        snippets = SnippetType.CAMELCASE,
+        tags = { "@purchase" }
 )
-public class CucumberTestRunner {
+public class TestRunner {
 }
