@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import io.cucumber.java.en.Given;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 public class MyStepdefs {
 WebDriver driver;
 public MyStepdefs(){
@@ -64,17 +65,24 @@ public MyStepdefs(){
 //            e.printStackTrace();
 //        }
         WebDriverWait wait = new WebDriverWait(driver,10);
-        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("/html/body/div[3]/div[1]/section/section/div[1]/div[1]/div[1]/div[1]")));
+        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//*[text()=\'Kết quả bán hàng hôm nay\']")));
         String ActualTitle = driver.getCurrentUrl();
 
 
         Assert.assertEquals(arg0, ActualTitle);
     }
 
-    @And("Quit browser")
-    public void quitBrowser() {
 
-        System.out.println("done");
-        driver.quit();
+    @And("Logut")
+    public void logut() {
+    driver.findElement(By.xpath("//*[@class=\"dpib userName\"]")).click();
+    driver.findElement(By.xpath("//*[@class=\'ng-binding\' and text()=\' Đăng xuất\' ]")).click();
+                try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+//    driver.delete_all_cookies();
+
     }
 }
