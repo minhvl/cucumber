@@ -69,7 +69,7 @@
               "status": "undefined"
             },
             "line": 11,
-            "name": "Quit browser",
+            "name": "Logut",
             "match": {},
             "keyword": "And "
           }
@@ -103,7 +103,7 @@
               "status": "undefined"
             },
             "line": 7,
-            "name": "Input user \"admin1\"",
+            "name": "Input user \"qlbach\"",
             "match": {},
             "matchedColumns": [
               0
@@ -148,7 +148,7 @@
               "status": "undefined"
             },
             "line": 11,
-            "name": "Quit browser",
+            "name": "Logut",
             "match": {},
             "keyword": "And "
           }

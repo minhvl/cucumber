@@ -47,7 +47,7 @@ formatter.step({
 });
 formatter.step({
   "line": 11,
-  "name": "Quit browser",
+  "name": "Logut",
   "keyword": "And "
 });
 formatter.examples({
@@ -76,7 +76,7 @@ formatter.examples({
     },
     {
       "cells": [
-        "admin1",
+        "qlbach",
         "admin@123",
         "https://marketleminh.kiotviet.vn/man/#/DashBoard"
       ],
@@ -136,7 +136,7 @@ formatter.step({
 });
 formatter.step({
   "line": 11,
-  "name": "Quit browser",
+  "name": "Logut",
   "keyword": "And "
 });
 formatter.match({});
@@ -184,7 +184,7 @@ formatter.step({
 });
 formatter.step({
   "line": 7,
-  "name": "Input user \"admin1\"",
+  "name": "Input user \"qlbach\"",
   "matchedColumns": [
     0
   ],
@@ -213,7 +213,7 @@ formatter.step({
 });
 formatter.step({
   "line": 11,
-  "name": "Quit browser",
+  "name": "Logut",
   "keyword": "And "
 });
 formatter.match({});

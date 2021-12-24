@@ -23,27 +23,6 @@ public MyStepdefs(){
     public void openBrowser() {
     driver.get("https://marketleminh.kiotviet.vn/");
     }
-//    @When("Login")
-//    public void login() {
-//
-////        driver.findElement(By.xpath("//*[@id=\"UserName\"]")).sendKeys("admin");
-////        driver.findElement(By.xpath("//*[@id=\"Password\"]")).sendKeys("admin@123");
-////        driver.findElement(By.xpath("//*[@id=\"loginForm\"]/section/section[2]/span[1]/input")).click();
-////        try {
-////            Thread.sleep(9000);
-////        } catch (InterruptedException e) {
-////            e.printStackTrace();
-////        }
-//
-//        driver.findElement(By.xpath("//*[@id=\"UserName\"]")).sendKeys("admin");
-//        driver.findElement(By.xpath("//*[@id=\"Password\"]")).sendKeys("admin@123");
-//        driver.findElement(By.xpath("//*[@id=\"loginForm\"]/section/section[2]/span[1]/input")).click();
-//        try {
-//            Thread.sleep(9000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//    }
     @When("Input user {string}")
     public void inputUser(String arg0) {
     driver.findElement(By.xpath("//*[@id=\"UserName\"]")).sendKeys(arg0);
@@ -59,11 +38,6 @@ public MyStepdefs(){
 
     @Then("I see dashboard {string}")
     public void iSeeDashboard(String arg0) {
-//        try {
-//            Thread.sleep(5000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
         WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//*[text()=\'Kết quả bán hàng hôm nay\']")));
         String ActualTitle = driver.getCurrentUrl();
@@ -82,7 +56,5 @@ public MyStepdefs(){
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-//    driver.delete_all_cookies();
-
     }
 }
