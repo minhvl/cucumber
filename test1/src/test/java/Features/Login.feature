@@ -11,7 +11,7 @@ Feature: test login
     And Logut
     Examples:
       | user   | password  | link                                             |
-      | admin  | admin@123 | https://marketleminh.kiotviet.vn/man/#/DashBoard |
+      | admin  | 123 | https://marketleminh.kiotviet.vn/man/#/DashBoard |
       | qlbach | admin@123 | https://marketleminh.kiotviet.vn/man/#/DashBoard |
 
 #  https://marketleminh.kiotviet.vn/man/#/login

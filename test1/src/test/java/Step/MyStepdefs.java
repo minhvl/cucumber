@@ -21,7 +21,7 @@ public MyStepdefs(){
 }
     @Given("open browser")
     public void openBrowser() {
-    driver.get("https://marketleminh.kiotviet.vn/");
+    driver.get("https://booking.kiotviet.vn/");
     }
     @When("Input user {string}")
     public void inputUser(String arg0) {
