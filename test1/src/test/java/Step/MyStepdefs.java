@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MyStepdefs {
 WebDriver driver;
+
 public MyStepdefs(){
     this.driver = Hooks.openAndQuitBrowser();
 }
@@ -23,7 +24,11 @@ public MyStepdefs(){
     public void openBrowser() {
     driver.get("https://booking.kiotviet.vn/");
     }
-    @When("Input user {string}")
+    @When("Input shop_name {string}")
+    public void inputShop_name(String arg0) {
+    driver.findElement(By.xpath("//*[@id=\"Retailer\"]")).sendKeys(arg0);
+    }
+    @And("Input user {string}")
     public void inputUser(String arg0) {
     driver.findElement(By.xpath("//*[@id=\"UserName\"]")).sendKeys(arg0);
     }
@@ -33,7 +38,7 @@ public MyStepdefs(){
     }
     @And("I click quan ly button")
     public void iClickQuanLyButton() {
-        driver.findElement(By.xpath("//*[@id=\"loginForm\"]/section/section[2]/span[1]/input")).click();
+        driver.findElement(By.xpath("//*[@type=\"submit\"]")).click();
     }
 
     @Then("I see dashboard {string}")
@@ -57,4 +62,6 @@ public MyStepdefs(){
             e.printStackTrace();
         }
     }
+
+
 }
